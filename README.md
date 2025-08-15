@@ -38,7 +38,7 @@ A state-of-the-art implementation of hybrid **Nonlinear Model Predictive Control
 
 ```bash
 git clone https://github.com/Major-Project-iiest/Learning-based-Nonlinear-MPC-for-under-actuated-robots
-cd nmpc-sac-pendubot
+cd Learning-based-Nonlinear-MPC-for-under-actuated-robots
 python run.py setup
 ```
 
