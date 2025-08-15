@@ -174,7 +174,7 @@ def install_acados():
         pass
     
     print("Installing acados...")
-    print("⚠️  acados installation requires manual setup. Please run:")
+    print(" acados installation requires manual setup. Please run:")
     print("   bash setup/install_acados.sh")
     print("   This will build acados from source and set up the Python interface.")
     return False
@@ -200,7 +200,7 @@ def run_training(config_path: str = 'config/config.yaml', **kwargs):
         print(f"✗ Training failed: {e}")
         return False
     except KeyboardInterrupt:
-        print("\\n⚠️  Training interrupted by user")
+        print(" Training interrupted by user")
         return False
 
 def run_evaluation(config_path: str = 'config/config.yaml', 
@@ -232,7 +232,7 @@ def run_evaluation(config_path: str = 'config/config.yaml',
         print(f"✗ Evaluation failed: {e}")
         return False
     except KeyboardInterrupt:
-        print("\\n⚠️  Evaluation interrupted by user")
+        print("\\n Evaluation interrupted by user")
         return False
 
 def run_tests():
@@ -253,9 +253,9 @@ def run_tests():
         print(f"\\n{test_name}...")
         try:
             subprocess.run([sys.executable, '-c', test_code], check=True, capture_output=True)
-            print("  ✓ PASSED")
+            print(" PASSED")
         except subprocess.CalledProcessError as e:
-            print(f"  ✗ FAILED: {e}")
+            print(f" FAILED: {e}")
             return False
     
     # Test acados (optional)
@@ -269,13 +269,13 @@ try:
     c = NMPCController(m)
     print('✓ NMPC OK')
 except Exception as e:
-    print(f'⚠️  NMPC not available: {e}')
+    print(f' NMPC not available: {e}')
 """
         subprocess.run([sys.executable, '-c', test_code], check=True)
     except:
-        print("  ⚠️  acados tests failed (expected if not installed)")
+        print(" acados tests failed ")
     
-    print("\\n✓ All basic tests passed!")
+    print("\\n All basic tests passed!")
     return True
 
 def create_demo_notebook():
@@ -342,7 +342,7 @@ def create_demo_notebook():
     with open('demo_notebook.ipynb', 'w') as f:
         json.dump(notebook_content, f, indent=2)
     
-    print("✓ Demo notebook created: demo_notebook.ipynb")
+    print("Demo notebook created: demo_notebook.ipynb")
 
 def print_usage():
     """Print usage information"""
@@ -496,13 +496,13 @@ Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
     elif args.command == 'test':
         success = run_tests()
         if success:
-            print("\\n✅ All tests passed! System ready for training.")
+            print("\\n All tests passed! System ready for training.")
         else:
-            print("\\n❌ Some tests failed. Check installation.")
+            print("\\n Some tests failed. Check installation.")
         
     elif args.command == 'clean':
         clean_project()
-        print("\\n🧹 Project cleaned!")
+        print("\\n Project cleaned!")
 
 if __name__ == "__main__":
     main()
