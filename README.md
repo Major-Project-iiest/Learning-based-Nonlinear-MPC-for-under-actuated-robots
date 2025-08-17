@@ -353,9 +353,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **GitHub Issues**: [Create an issue](https://github.com/yourusername/nmpc-sac-pendubot/issues)
-- **Email**: your.email@domain.com
-- **Twitter**: [@yourusername](https://twitter.com/yourusername)
+- **GitHub Issues**: [Create an issue](https://github.com/Major-Project-iiest/Learning-based-Nonlinear-MPC-for-under-actuated-robots/issues)
 
 ---
 
